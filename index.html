@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Micro Radar Round TFT Firmware Installer</title>
+
+    <meta name="description"
+        content="Flash the Micro Radar Round TFT firmware directly from your browser using ESP Web Tools.">
+
+    <meta name="theme-color" content="#111827">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ESP Web Tools -->
+  <script type="module"
+    src="https://esm.run/esp-web-tools">
+</script>
+</head>
+
+<body>
+
+<header class="hero">
+
+    <div class="container">
+
+        <h1>Micro Radar Round TFT</h1>
+
+        <p class="subtitle">
+            Browser-based firmware installer for ESP32 using ESP Web Tools.
+        </p>
+
+    </div>
+
+</header>
+
+<main class="container">
+
+    <section class="card">
+
+        <h2>Flash Firmware</h2>
+
+        <p>
+            Connect your ESP32 board using a USB data cable and click the button below.
+            Chrome or Microsoft Edge is required.
+        </p>
+
+        <div class="install-area">
+
+            <esp-web-install-button
+                manifest="https://lazydayscr.github.io/Micro-Radar-Round-TFT/manifest.json">
+
+                <button slot="activate">
+                    Flash Firmware
+                </button>
+
+            </esp-web-install-button>
+
+        </div>
+
+    </section>
+
+    <section class="grid">
+
+        <div class="card">
+
+            <h3>Project</h3>
+
+            <ul>
+                <li><strong>Name:</strong> Micro Radar Round TFT</li>
+                <li><strong>Developer:</strong> LazyDays Creation</li>
+                <li>
+                    <strong>Source:</strong>
+                    <a href="https://github.com/AnthonySturdy/micro-radar"
+                        target="_blank">
+                        GitHub Repository
+                    </a>
+                </li>
+
+                <li>
+                    <strong>License:</strong>
+                    Copyright © 2026 Anthony Sturdy
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Supported Hardware</h3>
+
+            <ul>
+
+                <li>ESP32-WROOM</li>
+
+                <li>ESP32 Dev Board</li>
+
+                <li>USB Data Cable</li>
+
+                <li>Windows / macOS / Linux</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Before You Begin</h2>
+
+        <ol>
+
+            <li>Connect the ESP32 using a USB data cable.</li>
+
+            <li>Close Arduino IDE, PlatformIO or Serial Monitor.</li>
+
+            <li>Click <strong>Flash Firmware</strong>.</li>
+
+            <li>Select your serial port.</li>
+
+            <li>Allow browser permissions.</li>
+
+            <li>Wait until flashing completes.</li>
+
+            <li>Press RESET if the board does not start automatically.</li>
+
+        </ol>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Tutorial</h2>
+
+        <p>
+            Need help installing the firmware?
+            Watch the complete video guide.
+        </p>
+
+        <a class="button secondary"
+            href="https://youtube.com/"
+            target="_blank">
+            Watch Tutorial
+        </a>
+
+    </section>
+
+    <section class="card warning">
+
+        <h2>Important Notes</h2>
+
+        <ul>
+
+            <li>Use a USB data cable, not a charging-only cable.</li>
+
+            <li>Only Chrome and Microsoft Edge support Web Serial.</li>
+
+            <li>Disconnect other applications using the serial port.</li>
+
+            <li>If detection fails, manually enter bootloader mode.</li>
+
+        </ul>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Installation Steps</h2>
+
+        <ol>
+
+            <li>Plug your ESP32 into your computer.</li>
+
+            <li>Click the Flash Firmware button.</li>
+
+            <li>Select your ESP32 serial port.</li>
+
+            <li>Click Connect.</li>
+
+            <li>Choose Install.</li>
+
+            <li>Confirm that you want to erase the device if prompted.</li>
+
+            <li>Wait until flashing reaches 100%.</li>
+
+            <li>Disconnect and reconnect the board if required.</li>
+
+        </ol>
+
+    </section>
+    <section class="card">
+
+        <h2>Browser Compatibility</h2>
+
+        <p>
+            ESP Web Tools uses the Web Serial API.
+            For the best experience, use one of these browsers:
+        </p>
+
+        <ul>
+            <li>✅ Google Chrome (Recommended)</li>
+            <li>✅ Microsoft Edge</li>
+            <li>❌ Firefox (Not Supported)</li>
+            <li>❌ Safari (Not Supported)</li>
+        </ul>
+
+    </section>
+
+    <section class="card">
+
+        <h2>USB Driver</h2>
+
+        <p>
+            If your ESP32 is not detected, install the correct USB driver for
+            your development board.
+        </p>
+
+        <ul>
+
+            <li>
+                CP210x Driver:
+                <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers"
+                    target="_blank">
+                    Silicon Labs
+                </a>
+            </li>
+
+            <li>
+                CH340 Driver:
+                <a href="https://sparks.gogo.co.nz/ch340.html"
+                    target="_blank">
+                    Download
+                </a>
+            </li>
+
+            <li>
+                CH9102 Driver:
+                <a href="https://www.wch.cn/downloads/CH343SER_ZIP.html"
+                    target="_blank">
+                    WCH Official
+                </a>
+            </li>
+
+        </ul>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Troubleshooting</h2>
+
+        <details>
+
+            <summary>Flash button cannot detect my ESP32</summary>
+
+            <ul>
+                <li>Use a USB data cable.</li>
+                <li>Reconnect the board.</li>
+                <li>Close Arduino IDE or any Serial Monitor.</li>
+                <li>Install the proper USB driver.</li>
+            </ul>
+
+        </details>
+
+        <details>
+
+            <summary>Failed to download manifest</summary>
+
+            <ul>
+                <li>Verify GitHub Pages is enabled.</li>
+                <li>Open manifest.json directly in your browser.</li>
+                <li>Check that firmware paths are correct.</li>
+                <li>Wait a few minutes after publishing GitHub Pages.</li>
+            </ul>
+
+        </details>
+
+        <details>
+
+            <summary>GitHub Pages shows 404</summary>
+
+            <ul>
+                <li>Confirm the repository name is correct.</li>
+                <li>Verify Pages is deployed from the correct branch.</li>
+                <li>Allow several minutes for the first deployment.</li>
+            </ul>
+
+        </details>
+
+        <details>
+
+            <summary>Manual Bootloader Mode</summary>
+
+            <ol>
+                <li>Hold the <strong>BOOT</strong> button.</li>
+                <li>Press and release <strong>RESET</strong>.</li>
+                <li>Release <strong>BOOT</strong>.</li>
+                <li>Click Flash Firmware again.</li>
+            </ol>
+
+        </details>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            <strong>Micro Radar Round TFT</strong>
+        </p>
+
+        <p>
+            Created by <strong>LazyDays Creation</strong>
+        </p>
+
+        <p>
+
+            Source Code:
+
+            <a href="https://github.com/AnthonySturdy/micro-radar"
+                target="_blank">
+
+                Anthony Sturdy
+
+            </a>
+
+        </p>
+
+        <p>
+
+            Browser Flasher powered by
+
+            <a href="https://esphome.github.io/esp-web-tools/"
+                target="_blank">
+
+                ESP Web Tools
+
+            </a>
+
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
