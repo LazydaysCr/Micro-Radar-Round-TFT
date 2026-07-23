@@ -67,13 +67,13 @@
 
         <div class="card">
 
-            <h3>Project</h3>
+            <h3>Project Details</h3>
 
             <ul>
                 <li><strong>Name:</strong> Micro Radar Round TFT</li>
-                <li><strong>Developer:</strong> LazyDays Creation</li>
+                <li><strong>Web flasher tool by:</strong> LazyDays Creation</li>
                 <li>
-                    <strong>Source:</strong>
+                    <strong>Original Source:</strong>
                     <a href="https://github.com/AnthonySturdy/micro-radar"
                         target="_blank">
                         GitHub Repository
@@ -99,43 +99,16 @@
 
                 <li>ESP32 Dev Board</li>
 
-                <li>USB Data Cable</li>
-
-                <li>Windows / macOS / Linux</li>
-
             </ul>
 
         </div>
 
     </section>
 
+   
     <section class="card">
 
-        <h2>Before You Begin</h2>
-
-        <ol>
-
-            <li>Connect the ESP32 using a USB data cable.</li>
-
-            <li>Close Arduino IDE, PlatformIO or Serial Monitor.</li>
-
-            <li>Click <strong>Flash Firmware</strong>.</li>
-
-            <li>Select your serial port.</li>
-
-            <li>Allow browser permissions.</li>
-
-            <li>Wait until flashing completes.</li>
-
-            <li>Press RESET if the board does not start automatically.</li>
-
-        </ol>
-
-    </section>
-
-    <section class="card warning">
-
-        <h2>Important Notes</h2>
+        <h2>Important Notes Before Install</h2>
 
         <ul>
 
@@ -145,7 +118,7 @@
 
             <li>Disconnect other applications using the serial port.</li>
 
-            <li>If detection fails, manually enter bootloader mode.</li>
+            <li>If connection fails, manually enter bootloader mode.</li>
 
         </ul>
 
@@ -153,50 +126,59 @@
 
     <section class="card">
 
-        <h2>Installation Steps</h2>
+    <h2>Installation Steps</h2>
+
+    <ol>
+
+        <li>Connect your ESP32 to your computer using a USB data cable.</li>
+
+        <li>Click the <strong>Connect</strong> button below.</li>
+
+        <li>Select your ESP32 serial port and click <strong>Connect</strong>.</li>
+
+        <li>A loading screen showing <strong>"Connecting"</strong> will appear.</li>
+
+        <li>If the <strong>Device Dashboard</strong> does not appear, expand the section below for manual bootloader instructions.</li>
+
+    </ol>
+
+    <details>
+
+        <summary><strong>Manual Bootloader Mode (If Device Dashboard Doesn't Appear)</strong></summary>
+
+        <p style="margin-top:16px;">
+            Some ESP32 boards do not automatically enter download mode. If you are repeatedly asked to select the COM port again, manually enter Bootloader Mode:
+        </p>
 
         <ol>
 
-            <li>Plug your ESP32 into your computer.</li>
+            <li>Press and hold the <strong>BOOT</strong> button for 3-4s.</li>
 
-            <li>Click the Flash Firmware button.</li>
+            <li>Briefly press and release the <strong>RESET</strong> button.</li>
 
-            <li>Select your ESP32 serial port.</li>
+            <li>Continue holding the <strong>BOOT</strong> button for about 2 seconds, then release it.</li>
 
-            <li>Click Connect.</li>
-
-            <li>Choose Install.</li>
-
-            <li>Confirm that you want to erase the device if prompted.</li>
-
-            <li>Wait until flashing reaches 100%.</li>
-
-            <li>Disconnect and reconnect the board if required.</li>
+            <li>Click <strong>Connect</strong> again. The <strong>Device Dashboard</strong> should now appear.</li>
 
         </ol>
 
-    </section>
+    </details>
+
+    <ol start="6">
+
+        <li>Click <strong>Install</strong> and allow permission request to erase old flash and upload new.</li>
+
+        <li>Wait until the flashing process reaches <strong>100%</strong>.</li>
+
+        <li>When flashing is complete, press the <strong>RESET</strong> button to run the firmware.</li>
+
+    </ol>
+
+</section>
+    
     <section class="card">
 
-        <h2>Browser Compatibility</h2>
-
-        <p>
-            ESP Web Tools uses the Web Serial API.
-            For the best experience, use one of these browsers:
-        </p>
-
-        <ul>
-            <li>✅ Google Chrome (Recommended)</li>
-            <li>✅ Microsoft Edge</li>
-            <li>❌ Firefox (Not Supported)</li>
-            <li>❌ Safari (Not Supported)</li>
-        </ul>
-
-    </section>
-
-    <section class="card">
-
-        <h2>USB Driver</h2>
+        <h2>USB Drivers (If no COM port detected) </h2>
 
         <p>
             If your ESP32 is not detected, install the correct USB driver for
@@ -232,64 +214,6 @@
         </ul>
 
     </section>
-
-    <section class="card">
-
-        <h2>Troubleshooting</h2>
-
-        <details>
-
-            <summary>Flash button cannot detect my ESP32</summary>
-
-            <ul>
-                <li>Use a USB data cable.</li>
-                <li>Reconnect the board.</li>
-                <li>Close Arduino IDE or any Serial Monitor.</li>
-                <li>Install the proper USB driver.</li>
-            </ul>
-
-        </details>
-
-        <details>
-
-            <summary>Failed to download manifest</summary>
-
-            <ul>
-                <li>Verify GitHub Pages is enabled.</li>
-                <li>Open manifest.json directly in your browser.</li>
-                <li>Check that firmware paths are correct.</li>
-                <li>Wait a few minutes after publishing GitHub Pages.</li>
-            </ul>
-
-        </details>
-
-        <details>
-
-            <summary>GitHub Pages shows 404</summary>
-
-            <ul>
-                <li>Confirm the repository name is correct.</li>
-                <li>Verify Pages is deployed from the correct branch.</li>
-                <li>Allow several minutes for the first deployment.</li>
-            </ul>
-
-        </details>
-
-        <details>
-
-            <summary>Manual Bootloader Mode</summary>
-
-            <ol>
-                <li>Hold the <strong>BOOT</strong> button.</li>
-                <li>Press and release <strong>RESET</strong>.</li>
-                <li>Release <strong>BOOT</strong>.</li>
-                <li>Click Flash Firmware again.</li>
-            </ol>
-
-        </details>
-
-    </section>
-
 </main>
 
 <footer>
@@ -302,19 +226,6 @@
 
         <p>
             Created by <strong>LazyDays Creation</strong>
-        </p>
-
-        <p>
-
-            Source Code:
-
-            <a href="https://github.com/AnthonySturdy/micro-radar"
-                target="_blank">
-
-                Anthony Sturdy
-
-            </a>
-
         </p>
 
         <p>
